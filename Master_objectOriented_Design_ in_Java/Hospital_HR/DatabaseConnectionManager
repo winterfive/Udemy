@@ -1,0 +1,26 @@
+package db;
+
+public class DatabaseConnectionManager {
+
+	public static DatabaseConnectionManager getManager() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public void connect() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void getConnectionObject() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void disconnect() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+
+}
