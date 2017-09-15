@@ -20,7 +20,5 @@ public class Employee {
 	// method just for Employee class
 	public String toString() {
 		return "Employee [id = " + id + ", name = " + name + ", department = " + department + ", working = " + working + "]";
-	}
-	
-	
+	}	
 }
