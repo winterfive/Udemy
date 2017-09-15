@@ -1,0 +1,29 @@
+package clients;
+import domain.Employee;
+import domain.dao.EmployeeDAO;
+
+public class clientModule {
+	
+	public static void main(String args[]) {
+		
+		Employee peggy = new Employee(001, "peggy", "nursing", true);
+		clientModule.hireNewEmployee(peggy);
+	}
+	
+	public static void hireNewEmployee(Employee employee) {
+		EmployeeDAO employeeDao = new EmployeeDAO();
+		employeeDao.saveEmployee(employee);		
+	}
+	
+	public static void terminateEmployee(Employee employee) {
+		EmployeeDAO employeeDao = new EmployeeDAO();
+		employeeDao.deleteEmployee(employee);
+	}
+	
+	public static void printEmployeeReport(Employee employee) {
+		
+	}
+	
+	
+
+}
