@@ -1,0 +1,35 @@
+package clients;
+import domain.Employee;
+import domain.dao.EmployeeDAO;
+import reporting.EmployeeReportFormatter;
+import reporting.FormatType;
+
+// a simple but bad design for assignment 1 (via instructor)
+// the clientModule doesn't conform to the SRP
+
+public class ClientModule {
+	
+	public static void main(String args[]) {
+		
+		// hard coded input, bad design		
+		Employee peggy = new Employee(001, "peggy", "nursing", true);
+		ClientModule.hireNewEmployee(peggy);
+		printEmployeeReport(peggy, FormatType.XML);
+	}
+	
+	public static void hireNewEmployee(Employee employee) {
+		EmployeeDAO employeeDao = new EmployeeDAO();
+		employeeDao.saveEmployee(employee);		
+	}
+	
+	public static void terminateEmployee(Employee employee) {
+		EmployeeDAO employeeDao = new EmployeeDAO();
+		employeeDao.deleteEmployee(employee);
+	}
+	
+	public static void printEmployeeReport(Employee employee, FormatType formatType) {
+		EmployeeReportFormatter formatter = new EmployeeReportFormatter(employee, formatType);
+		System.out.println(formatter.getFormattedEmployee());
+	}
+
+}
