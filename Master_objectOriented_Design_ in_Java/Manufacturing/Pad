@@ -1,0 +1,25 @@
+package processes;
+
+public class Pad extends genManProcess{
+
+	public Pad(String name) {
+		super(name);
+		// TODO Auto-generated constructor stub
+	}
+	
+	protected void assembleDevice() {
+		System.out.println("iPad Assembled.");
+	}
+	
+	protected void testDevice() {
+		System.out.println("iPad tested.");
+	}
+	
+	protected void packageDevice() {
+		System.out.println("iPad packaged.");
+	}
+	
+	protected void storeDevice() {
+		System.out.println("iPad stored.");
+	}
+}
