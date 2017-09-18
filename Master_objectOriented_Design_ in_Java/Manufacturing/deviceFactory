@@ -1,0 +1,19 @@
+package clients;
+
+import processes.Laptop;
+import processes.Mobile;
+import processes.Pad;
+import processes.genManProcess;
+
+public class deviceFactory {
+	public static void main(String args[]) {
+		genManProcess manufacturer = new Laptop("MacBook Pro");
+		manufacturer.launchProcess();
+		
+		genManProcess manufacturer2 = new Mobile("Samsung 8");
+		manufacturer2.launchProcess();
+		
+		genManProcess manufacturer3 = new Pad("iPad");
+		manufacturer3.launchProcess();
+	}	
+}
