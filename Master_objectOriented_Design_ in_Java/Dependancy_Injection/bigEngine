@@ -1,0 +1,16 @@
+package parts;
+
+public class bigEngine implements Engine {
+	
+	private int hp;
+	
+	public bigEngine(int hp) {
+		this.hp = hp;
+	}
+
+	public void startEngine() {
+		System.out.println("Started the " + hp + " horsepower engine.");
+		
+	}
+}
+						
