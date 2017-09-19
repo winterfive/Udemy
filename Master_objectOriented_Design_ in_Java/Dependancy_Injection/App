@@ -1,0 +1,15 @@
+package client;
+
+import parts.smallEngine;
+import vehicles.Vehicle;
+
+public class App {
+	
+	public static void main(String args []) {
+		
+		Vehicle raceCar = new Vehicle(new smallEngine(150));
+		raceCar.crankIgnition();
+		
+	}
+
+}
