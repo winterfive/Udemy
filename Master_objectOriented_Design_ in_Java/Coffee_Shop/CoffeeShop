@@ -1,0 +1,32 @@
+package coffeeShop;
+
+public class CoffeeShop {
+	
+	public static void main(String args []) {
+		
+		// When a Customer enters the shop, an Attendant will take orders 
+		// (customer name, drink name), create the drinks, and call out the customer 
+		// name when the drink is ready.  The Attendant tracks each customer and 
+		// their order via lists.
+		
+		Customer darwin = new Customer("Darwin", "Whole Milk");
+		Customer tom = new Customer("Tom", "Hot Green Tea");
+		Customer lee = new Customer("Lee", "Skinny Mocha");
+		
+		CoffeeAttendant barista = new CoffeeAttendant();
+		
+		barista.takeOrder(darwin);
+		barista.takeOrder(tom);
+		
+		barista.prepareDrink("Whole Milk");
+		barista.prepareDrink("Hot Green Tea");
+		
+		barista.callOutOrders();
+		
+		CoffeeAttendant manager = new CoffeeAttendant();
+		
+		manager.takeOrder(lee);
+		manager.prepareDrink("Skinny Mocha");
+		manager.callOutOrders();		
+	}
+}
