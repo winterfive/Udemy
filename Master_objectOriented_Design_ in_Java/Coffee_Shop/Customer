@@ -1,0 +1,34 @@
+package coffeeShop;
+
+public class Customer implements WaitingCustomer{
+	
+	// variables needed for Customer class
+	private String name;
+	private String drinkOrdered;
+	
+	public Customer(String name, String drinkOrdered) {
+		super();
+		this.name = name;
+		this.drinkOrdered = drinkOrdered;
+	}
+
+	// define method for getting customer name
+	public String getName() {
+		return name;
+	}
+	
+	// define method for getting drinkName
+	public String getDrinkOrdered() {
+		return drinkOrdered;
+	}
+	
+	// define method for leaving store
+	public void leaveShop(String finishedDrink) {
+		System.out.println("Customer: Thanks for my " + finishedDrink + ". See you tomorrow.");
+	}
+
+	public void orderReady(String finishedDrink) {
+		if (drinkOrdered.equals(finishedDrink))
+				leaveShop(finishedDrink);
+	}	
+}
