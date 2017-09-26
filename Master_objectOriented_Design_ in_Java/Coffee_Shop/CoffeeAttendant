@@ -1,0 +1,49 @@
+package coffeeShop;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class CoffeeAttendant {
+	
+	// tracks customer names and orders
+	
+	private List<Customer> customerList;
+	private List<String> completedDrinks;
+	
+	public CoffeeAttendant() {
+		customerList = new ArrayList<Customer>();
+		completedDrinks = new ArrayList<String>();
+	}
+
+	public void takeOrder(Customer customer) {
+		customerList.add(customer);
+		if (customer.equals("Lee")) {
+			System.out.println("Manager: " + customer.getName()
+			+ ", I'm working on your " + customer.getDrinkOrdered() +
+					" right now.");
+		} else {
+			System.out.println("Barista: " + customer.getName()
+			+ ", I'm making your " + customer.getDrinkOrdered() +
+			" right now.");
+		}
+	}
+
+	public void prepareDrink(String drinkToBePrepared) {
+		double timeTaken = Math.random() * 10;
+		try {
+			Thread.sleep((long) (timeTaken) * 1000);
+			completedDrinks.add(drinkToBePrepared);
+		} catch(InterruptedException E) {
+			System.out.println("For some reason, drink wasn't prepared.");			
+		}		
+	}
+
+	public void callOutOrders() {
+		for (String readyDrink : completedDrinks) {
+			System.out.println("Barista: Order up... " + readyDrink);
+			for (Customer customer : customerList) {
+				customer.orderReady(readyDrink);
+			}
+		}		
+	}
+}
