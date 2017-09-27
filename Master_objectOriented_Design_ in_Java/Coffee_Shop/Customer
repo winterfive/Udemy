@@ -24,7 +24,11 @@ public class Customer implements WaitingCustomer{
 	
 	// define method for leaving store
 	public void leaveShop(String finishedDrink) {
-		System.out.println("Customer: Thanks for my " + finishedDrink + ". See you tomorrow.");
+		if (finishedDrink.equals("Skinny Mocha")) {
+			System.out.println("Lee: Love those " + finishedDrink + "s!  Have a good day!");
+		} else {
+			System.out.println("Customer: Thanks for my " + finishedDrink + ". See you tomorrow.");
+		}
 	}
 
 	public void orderReady(String finishedDrink) {
