@@ -1,0 +1,64 @@
+package carBuilder;
+
+public class Car {
+	
+	private String make;	  // required
+	private String model; // required
+	private int doors;
+	private String color;
+	private int horsepower;	
+	
+	// private constructor for Car
+	private Car(Builder builder) {
+		this.make = builder.make;	
+		this.model = builder.model;
+		this.color = builder.color;
+		this.doors = builder.doors;
+		this.horsepower = builder.horsepower;
+	}
+		
+	@Override
+	public String toString() {
+		return "Make: " + make +
+				"\nModel: " + model +
+				"\nColor: " + color +
+				"\nDoors: " + doors +
+				"\nHorsepower: " + horsepower;
+	}	
+	
+	public static class Builder {
+		
+		private String make;	  // required
+		private String model; // required
+		private int doors;
+		private String color;
+		private int horsepower;
+		
+		// required parameters
+		public Builder(String make, String model) {
+			this.make = make;
+			this.model = model;
+		}
+		
+		// optional parameters
+		public Builder doors(int value) {
+			this.doors = value;
+			return this;
+		}
+		
+		public Builder color(String value) {
+			this.color = value;
+			return this;
+		}
+		
+		public Builder horsepower(int value) {
+			this.horsepower = value;
+			return this;
+		}
+		
+		// method
+		public Car build() {
+			return new Car(this);
+		}
+	}
+}
