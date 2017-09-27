@@ -17,7 +17,7 @@ public class CoffeeAttendant {
 
 	public void takeOrder(Customer customer) {
 		customerList.add(customer);
-		if (customer.equals("Lee")) {
+		if (customer.getName().equals("Lee")) {
 			System.out.println("Manager: " + customer.getName()
 			+ ", I'm working on your " + customer.getDrinkOrdered() +
 					" right now.");
