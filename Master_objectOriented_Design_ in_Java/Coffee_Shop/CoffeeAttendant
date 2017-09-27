@@ -40,7 +40,11 @@ public class CoffeeAttendant {
 
 	public void callOutOrders() {
 		for (String readyDrink : completedDrinks) {
+			if (readyDrink.equals("Skinny Mocha")) {
+				System.out.println("Manager: Lee, your drink is ready.");
+			} else {
 			System.out.println("Barista: Order up... " + readyDrink);
+			}
 			for (Customer customer : customerList) {
 				customer.orderReady(readyDrink);
 			}
