@@ -1,0 +1,16 @@
+package carBuilder;
+
+public class ParkingLot {
+	
+	public static void main(String args[]) {
+		
+		Car fastCar = new Car.Builder("Lamborgini", "Fancy Name")
+				.doors(2)
+				.color("green")
+				.horsepower(500)
+				.build();
+		
+		System.out.println(fastCar);
+	}
+
+}
