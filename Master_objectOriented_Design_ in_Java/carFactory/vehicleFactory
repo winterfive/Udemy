@@ -1,0 +1,9 @@
+package vehicle.factory;
+
+public class vehicleFactory {
+
+	public static Vehicle getVehicle(VehicleType vehicleType) {
+		return vehicleType.getVehicle();
+	}
+
+}
