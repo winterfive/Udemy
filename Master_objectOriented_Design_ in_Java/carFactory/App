@@ -1,0 +1,14 @@
+package vehicle.factory;
+
+public class App {
+	
+	public static void main(String args []) {
+		
+		Vehicle truck = vehicleFactory.getVehicle(VehicleType.TRUCK);		
+		truck.startEngine();
+		
+		Vehicle car = vehicleFactory.getVehicle(VehicleType.CAR);		
+		car.startEngine();
+	}
+
+}
