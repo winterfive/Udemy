@@ -1,0 +1,9 @@
+package vehicle.factory;
+
+public interface Vehicle {
+	
+	public default void startEngine() {
+		System.out.println("The vehicle has started it's engine.");
+	}
+
+}
