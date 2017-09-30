@@ -1,0 +1,29 @@
+package hello;
+
+import java.io.*;
+import java.util.Scanner;
+
+public class App {
+	
+	public static void main(String args[]) {
+		
+		// print out all langs from LangNames
+		for (LangNames l : LangNames.values()) {
+			System.out.println(l);
+		}
+		
+		// scanner
+		Scanner reader = new Scanner(System.in);
+		System.out.println("Please select from languages listed above:");
+		String langChoice = reader.nextLine();
+	
+	// if statements here to match langChoice to ENUM values?
+		
+		langChoice = langChoice.toUpperCase();
+		
+	if (langChoice.equals("FRENCH")) {
+		Greeting frenchGreeting = Factory.getLanguage(LangNames.FRENCH);
+		frenchGreeting.sayGreeting();
+		}
+	}
+}
