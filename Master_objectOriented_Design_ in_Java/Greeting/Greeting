@@ -1,0 +1,9 @@
+package hello;
+
+public interface Greeting {
+	
+	public abstract void sayGreeting();
+
+	public static void getLanguage() {
+	}
+}
