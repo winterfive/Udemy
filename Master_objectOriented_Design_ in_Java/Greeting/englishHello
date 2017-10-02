@@ -1,0 +1,10 @@
+package hello;
+
+public class englishHello implements Greeting {
+
+	@Override
+	public void sayGreeting() {
+		System.out.println("Hello");		
+	}
+
+}
