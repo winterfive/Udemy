@@ -1,0 +1,35 @@
+package hello;
+
+public enum LangNames {
+	FRENCH {
+		public Greeting getLanguage() {
+			return new frenchHello();			
+		}		
+	}, 
+	
+	ENGLISH {
+		public Greeting getLanguage() {
+			return new englishHello();
+		}		
+	}, 
+	
+	SPANISH {
+		public Greeting getLanguage() {
+			return new spanishHello();
+		}		
+	}, 
+	
+	GERMAN {
+		public Greeting getLanguage() {
+			return new germanHello();
+		}		
+	}, 
+	
+	CHINESE {
+		public Greeting getLanguage() {
+			return new chineseHello();
+		}		
+	};	
+	
+	public abstract Greeting getLanguage();
+}
