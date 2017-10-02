@@ -1,0 +1,9 @@
+package hello;
+
+public class germanHello implements Greeting{
+
+	@Override
+	public void sayGreeting() {
+		System.out.println("Guten Tag");		
+	}
+}
