@@ -1,0 +1,8 @@
+package hello;
+
+public class Factory {
+	
+	public static Greeting getLanguage(LangNames languageName) {
+		return languageName.getLanguage();
+	}
+}
