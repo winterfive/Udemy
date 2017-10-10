@@ -6,4 +6,4 @@ Courses:
 
 Absolute Introduction to Object Oriented Programming, completed July 2017
 
-Master Object Oriented Design in Java
+Master Object Oriented Design in Java, completed Sept. 2017
